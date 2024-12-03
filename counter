@@ -1,0 +1,38 @@
+calls = 0
+def count_calls(*args):
+   for i in args:
+       calls =+1
+
+
+print("Введите искомую комбинацию букв")
+
+
+def string_info(list_):
+    global list_find_low
+    print("искомая комбинация", len(list_), ",", list_.lower(), ",", list_.upper())
+    list_find = list_
+    list_find_low = list_find.lower()
+    print(list_find_low)
+    count_calls()
+
+string_info(input())
+
+print("создайте список для поиска через , : ")
+
+
+def is_contains(string, list_to_search):
+    print("список для поиска : ", list_to_search)
+    correct_list = list_to_search.split(",")
+    correct_list_low = [s.lower() for s in correct_list]
+    for i in range(len(correct_list)):
+        if list_find_low == correct_list_low[i]:
+            print(True)
+            return
+        else:
+            print(False)
+            return
+    count_calls()
+
+is_contains(list_find_low, input())
+
+print(calls)
