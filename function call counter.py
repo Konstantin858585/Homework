@@ -33,4 +33,4 @@ string_info('')
 string_info('')
 is_contains('',[])
 
-print('Функции: ',calls)
+print('Функции : ',calls)
